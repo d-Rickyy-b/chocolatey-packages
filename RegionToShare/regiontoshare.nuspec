@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>regiontoshare</id>
+    <version>1.6</version>
+    <title>Region to Share</title>
+    <packageSourceUrl>https://github.com/tom-englert/RegionToShare</packageSourceUrl>
+    <authors>Tom Englert</authors>
+    <owners>d-Rickyy-b</owners>
+    <projectUrl>https://github.com/tom-englert/RegionToShare</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/tom-englert/RegionToShare@main/src/Assets/128.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Windows helper app to share only a part of a screen via video conference apps that only support either full screen or single window like e.g. Teams, WebEx, etc.</description>
+    <summary>A Windows helper app to share only a part of a screen via video conference apps that only support either full screen or single window like e.g. Teams, WebEx, etc.</summary>
+    <tags>regiontoshare video conference screen share</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
