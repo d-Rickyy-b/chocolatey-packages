@@ -4,10 +4,11 @@
     <id>regiontoshare</id>
     <version>1.6</version>
     <title>Region to Share</title>
-    <packageSourceUrl>https://github.com/tom-englert/RegionToShare</packageSourceUrl>
+    <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/RegionToShare</packageSourceUrl>
     <authors>Tom Englert</authors>
     <owners>d-Rickyy-b</owners>
     <projectUrl>https://github.com/tom-englert/RegionToShare</projectUrl>
+    <projectSourceUrl>https://github.com/tom-englert/RegionToShare</projectSourceUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/tom-englert/RegionToShare@main/src/Assets/128.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A Windows helper app to share only a part of a screen via video conference apps that only support either full screen or single window like e.g. Teams, WebEx, etc.</description>
