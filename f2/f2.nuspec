@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>f2</id>
+    <version>1.9.1</version>
+    <title>f2</title>
+    <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/f2</packageSourceUrl>
+    <authors>Ayooluwa Isaiah</authors>
+    <owners>d-Rickyy-b</owners>
+    <projectUrl>https://github.com/ayoisaiah/f2</projectUrl>
+    <projectSourceUrl>https://github.com/ayoisaiah/f2</projectSourceUrl>
+    <iconUrl>https://camo.githubusercontent.com/f76fbf03c5d2247eeaca7bae4555dbd230fd977f66993e4e22ac77160a8b55b8/68747470733a2f2f696b2e696d6167656b69742e696f2f7475726e75706465762f66325f6c6f676f5f303265444d695674372e706e67</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>F2 is a cross-platform command-line tool for batch renaming files and directories quickly and safely. Written in Go!</description>
+    <summary>F2 is a cross-platform command-line tool for batch renaming files and directories quickly and safely. Written in Go!</summary>
+    <tags>rename golang batch-rename</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
