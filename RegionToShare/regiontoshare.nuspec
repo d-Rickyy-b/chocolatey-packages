@@ -9,7 +9,9 @@
     <owners>d-Rickyy-b</owners>
     <projectUrl>https://github.com/tom-englert/RegionToShare</projectUrl>
     <projectSourceUrl>https://github.com/tom-englert/RegionToShare</projectSourceUrl>
+    <licenseUrl>https://github.com/tom-englert/RegionToShare/blob/main/LICENSE</licenseUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/tom-englert/RegionToShare@main/src/Assets/128.png</iconUrl>
+    <releaseNotes>https://github.com/tom-englert/RegionToShare/blob/main/ReleaseNotes.md</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A Windows helper app to share only a part of a screen via video conference apps that only support either full screen or single window like e.g. Teams, WebEx, etc.</description>
     <summary>A Windows helper app to share only a part of a screen via video conference apps that only support either full screen or single window like e.g. Teams, WebEx, etc.</summary>
