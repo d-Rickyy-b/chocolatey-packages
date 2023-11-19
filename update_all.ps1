@@ -66,10 +66,10 @@ $Options = [ordered]@{
         Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
     }
 
-    GitReleases    = @{
-        ApiToken    = $Env:github_api_key                   #Your github api key
-        ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
-    }
+    # GitReleases    = @{
+    #    ApiToken    = $Env:github_api_key                   #Your github api key
+    #    ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
+    #}
 
     # RunInfo = @{
     #     Exclude = 'password', 'apikey', 'apitoken'          #Option keys which contain those words will be removed
