@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$downloadUrl = 'https://github.com/tom-englert/RegionToShare/releases/download/1.7/RegionToShare.zip'
-$fileChecksum = '8ee110b38bbf8a95b662ae7f772e82e3f4a648aa55e75e3297f3abb07919d9d1'
+$downloadUrl = 'https://github.com/tom-englert/RegionToShare/releases/download/1.8.0/RegionToShare.zip'
+$fileChecksum = '34499e2c20c8bc31089925866c29831cef716b174dcab0d8a5323f75f7044108'
 
 $installArgs = @{
     packageName   = 'regiontoshare'
