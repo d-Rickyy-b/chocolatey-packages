@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/ayoisaiah/f2</projectUrl>
     <projectSourceUrl>https://github.com/ayoisaiah/f2</projectSourceUrl>
     <licenseUrl>https://github.com/ayoisaiah/f2/blob/master/LICENCE</licenseUrl>
-    <iconUrl>https://camo.githubusercontent.com/f76fbf03c5d2247eeaca7bae4555dbd230fd977f66993e4e22ac77160a8b55b8/68747470733a2f2f696b2e696d6167656b69742e696f2f7475726e75706465762f66325f6c6f676f5f303265444d695674372e706e67</iconUrl>
+    <iconUrl>https://ik.imagekit.io/turnupdev/f2_logo_02eDMiVt7.png</iconUrl>
     <releaseNotes>https://github.com/ayoisaiah/f2/blob/master/CHANGELOG.md</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>F2 is a cross-platform command-line tool for batch renaming files and directories quickly and safely. Written in Go!</description>
