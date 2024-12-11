@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>heynote</id>
+    <version>1.8.0</version>
+    <title>heynote</title>
+    <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/heynote</packageSourceUrl>
+    <authors>Jonatan Heyman</authors>
+    <owners>d-Rickyy-b</owners>
+    <projectUrl>https://heynote.com/</projectUrl>
+    <projectSourceUrl>https://github.com/heyman/heynote</projectSourceUrl>
+    <licenseUrl>https://github.com/heyman/heynote/blob/main/LICENSE</licenseUrl>
+    <iconUrl>https://heynote.com/img/logo.png</iconUrl>
+    <releaseNotes>https://github.com/heyman/heynote/blob/main/docs/changelog.md</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Heynote is a dedicated scratchpad for developers. It functions as a large persistent text buffer where you can write down anything you like. Works great for that Slack message you don't want to accidentally send, a JSON response from an API you're working with, notes from a meeting, your daily to-do list, etc.</description>
+    <summary>Heynote is a dedicated scratchpad for developers</summary>
+    <tags>editor notes developer-tools note-taking scratchpad productivity-tools notes-app</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
