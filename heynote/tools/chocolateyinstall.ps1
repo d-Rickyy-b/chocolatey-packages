@@ -1,7 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://github.com/heyman/heynote/releases/download/v1.8.0/Heynote_1.8.0.exe'
-$checksum = '1cb7542da7acceb1b25b9b487641a500ea97021d0693bfdf09ce0413e9a7923b'
+$url = 'https://github.com/heyman/heynote/releases/download/v2.7.1/Heynote_2.7.1.exe'
+$checksum = ''
 
 $installArgs = @{
     packageName   = 'heynote'

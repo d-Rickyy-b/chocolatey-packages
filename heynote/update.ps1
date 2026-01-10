@@ -8,10 +8,12 @@ function global:au_GetLatest {
     $version = $latest_release.tag_name.TrimStart("v")
 
     foreach ($asset in $latest_release.assets) {
-        $windows_asset = $asset | Where-Object name -Match 'Heynote_\d+\.\d+\.\d+\.exe'
-        $download_url = $windows_asset.browser_download_url
+        $windows_asset = $asset | Where-Object name -Match 'Heynote_\d+\.\d+\.\d+\.exe$'
+        if ($windows_asset) {
+            $download_url = $windows_asset.browser_download_url
+        }
     }
-    
+
     return @{
         Version = $version
         URL   = $download_url
