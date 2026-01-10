@@ -35,7 +35,7 @@ param(
     [string[]]$Name,
 
     # The directory to find packages in
-    [string]$Root = "$PSScriptRoot",
+    [string]$Root = "$PSScriptRoot\packages",
 
     # Whether failures for testing should throw or not.
     [switch]$ThrowOnErrors
