@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>RegionToShare</id>
-    <version>1.11.0.20260111</version>
+    <version>1.11.0</version>
     <title>Region to Share</title>
     <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/packages/RegionToShare</packageSourceUrl>
     <authors>Tom Englert</authors>
