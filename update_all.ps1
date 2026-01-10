@@ -113,11 +113,11 @@ $Options = [ordered]@{
     Path            = "$PSScriptRoot\Update-History.md"            #Path where to save history
   }
 
-  Gist                      = @{
-    Id     = $Env:gist_id                               #Your gist id; leave empty for new private or anonymous gist
-    ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
-    Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"       #List of files to add to the gist
-  }
+  #Gist                      = @{
+  #  Id     = $Env:gist_id                               #Your gist id; leave empty for new private or anonymous gist
+  #  ApiKey = $Env:github_api_key                        #Your github api key - if empty anoymous gist is created
+  #  Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"       #List of files to add to the gist
+  #}
 
   Git                       = @{
     User     = ''                                       #Git username, leave empty if github api key is used
@@ -146,15 +146,12 @@ $Options = [ordered]@{
   else {}
 
   ForcedPackages            = $ForcedPackages -split ' '
-  UpdateIconScript          = "$PSScriptRoot\scripts\Update-IconUrl.ps1"
-  UpdatePackageSourceScript = "$PSScriptRoot\scripts\Update-PackageSourceUrl.ps1"
+  #UpdateIconScript          = "$PSScriptRoot\scripts\Update-IconUrl.ps1"
+  #UpdatePackageSourceScript = "$PSScriptRoot\scripts\Update-PackageSourceUrl.ps1"
   ModulePaths               = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
   BeforeEach                = {
     param($PackageName, $Options )
     $Options.ModulePaths | ForEach-Object { Import-Module $_ }
-    . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
-    . $Options.UpdatePackageSourceScript $PackageName.ToLowerInvariant() -Quiet
-    Expand-Aliases -Directory "$PWD"
 
     $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"
     $p = $Options.ForcedPackages | Where-Object { $_ -match $pattern }
