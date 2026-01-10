@@ -4,7 +4,7 @@
     <id>heynote</id>
     <version>2.7.1.20260111</version>
     <title>heynote</title>
-    <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/heynote</packageSourceUrl>
+    <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/packages/heynote</packageSourceUrl>
     <authors>Jonatan Heyman</authors>
     <owners>d-Rickyy-b</owners>
     <projectUrl>https://heynote.com/</projectUrl>

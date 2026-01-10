@@ -4,7 +4,7 @@
     <id>RegionToShare</id>
     <version>1.11.0.20260111</version>
     <title>Region to Share</title>
-    <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/RegionToShare</packageSourceUrl>
+    <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/packages/RegionToShare</packageSourceUrl>
     <authors>Tom Englert</authors>
     <owners>d-Rickyy-b</owners>
     <projectUrl>https://github.com/tom-englert/RegionToShare</projectUrl>
