@@ -24,6 +24,7 @@ jobs:
 
       - name: Update
         run: |
+          Set-ExecutionPolicy Bypass -Scope Process -Force
           refreshenv
           git config --global user.email "chocolatey@realdimensions.net"
           git config --global user.name "Chocolatey"
