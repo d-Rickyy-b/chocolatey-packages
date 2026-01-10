@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$url32 = 'https://github.com/ayoisaiah/f2/releases/download/v1.9.1/f2_1.9.1_windows_386.tar.gz'
-$checksum32 = '92bc9b00d88356c26b947b9a75b87bdb751385665c606e70ce31c49459612fb1'
-$url64 = 'https://github.com/ayoisaiah/f2/releases/download/v1.9.1/f2_1.9.1_windows_amd64.tar.gz'
-$checksum64 = '5c4a3d825c7fb4d371d3fb8e0b987868b07b279047c507ebef1c1cc6c59e9469'
+$url32 = 'https://github.com/ayoisaiah/f2/releases/download/v2.2.2/f2_2.2.2_windows_386.zip'
+$checksum32 = 'f34478584a1a143ab0feb76255acb72b381c269d94148dc721341261f0692a49'
+$url64 = 'https://github.com/ayoisaiah/f2/releases/download/v2.2.2/f2_2.2.2_windows_amd64.zip'
+$checksum64 = '64eba7ddbadeca9cd5657b344058311f3c42d342c5e88f93a68d8f07fb8d0a53'
 
 $installArgs = @{
     packageName   = 'f2'
     unzipLocation = $toolsDir
-    fileType      = 'GZIP'
+    fileType      = 'ZIP'
     url           = $url32
     checksumType  = 'sha256'
     checksum      = $checksum32
@@ -18,5 +18,5 @@ $installArgs = @{
 }
 
 Install-ChocolateyZipPackage @installArgs
-$File = Get-ChildItem -File -Path $env:ChocolateyInstall\lib\$packageName\tools\ -Filter *.tar
+$File = Get-ChildItem -File -Path $env:ChocolateyInstall\lib\$packageName\tools\ -Filter *.zip
 Get-ChocolateyUnzip -fileFullPath $File.FullName -destination $env:ChocolateyInstall\lib\$packageName\tools\

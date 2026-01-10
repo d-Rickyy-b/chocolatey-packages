@@ -8,14 +8,16 @@ function global:au_GetLatest {
     $version = $latest_release.tag_name.TrimStart("v")
 
     foreach ($asset in $latest_release.assets) {
-        $windows_asset_32 = $asset | Where-Object name -Match '_windows_(i?)386.tar.gz'
-        $windows_asset_64 = $asset | Where-Object name -Match '_windows_amd64.tar.gz'
+        $windows_asset_32 = $asset | Where-Object name -Match '_windows_(i?)386.zip'
+        $windows_asset_64 = $asset | Where-Object name -Match '_windows_amd64.zip'
         if ($windows_asset_32) {
             $download_url_32 = $windows_asset_32.browser_download_url
         }
         if ($windows_asset_64) {
             $download_url_64 = $windows_asset_64.browser_download_url
         }
+        Write-Output $windows_asset_32
+        Write-Output $windows_asset_64
     }
     
     return @{
