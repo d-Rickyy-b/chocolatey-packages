@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>heynote</id>
-    <version>1.8.0</version>
+    <version>2.7.1</version>
     <title>heynote</title>
     <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/packages/heynote</packageSourceUrl>
     <authors>Jonatan Heyman</authors>
