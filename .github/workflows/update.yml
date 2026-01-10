@@ -3,6 +3,10 @@ name: Update check
 on:
   schedule:
     - cron: "30 4 * * 0,3"
+  push:
+    branches:
+      - main
+      - master
 
 jobs:
   update:
