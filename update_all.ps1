@@ -168,5 +168,10 @@ $global:au_Root = $Root          #Path to the AU packages
 $global:au_GalleryUrl = ''             #URL to package gallery, leave empty for Chocolatey Gallery
 $global:info = updateall -Name $Name -Options $Options
 
-#Uncomment to fail the build on AppVeyor on any package error
-if ($global:info.Error) { throw 'Errors during update' }
+if ($global:info.Where{$_.Error}) {
+  if ($ThrowOnErrors) {
+    throw 'Errors during update. Access $global:info for more information.'
+  } else {
+    Write-Error 'Errors during update. Access $global:info for more information.'
+  }
+}
