@@ -20,7 +20,7 @@ jobs:
       - name: Choco install updater
         uses: crazy-max/ghaction-chocolatey@v3
         with:
-          args: install chocolatey-au --confirm
+          args: install chocolatey-au wormies-au-helpers --confirm
 
       - name: Update
         run: |
