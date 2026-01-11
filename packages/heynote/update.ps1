@@ -5,17 +5,17 @@ function global:au_GetLatest {
      
     return @{
         Version = $LatestRelease.tag_name.TrimStart("v")
-        URL   = $LatestRelease.assets | Where-Object {$_.name -Match 'Heynote_\d+\.\d+\.\d+\.exe$'} | Select-Object -ExpandProperty browser_download_url
+        URL32   = $LatestRelease.assets | Where-Object {$_.name -Match 'Heynote_\d+\.\d+\.\d+\.exe$'} | Select-Object -ExpandProperty browser_download_url
     }
 }
 
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\`$url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(?i)(^\`$checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum)'"
+            "(?i)(^\`$url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
+            "(?i)(^\`$checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
         }
     }
 }
 
-update -NoReadme
+update -NoReadme -NoCheckChocoVersion
