@@ -18,4 +18,4 @@ function global:au_SearchReplace {
     }
 }
 
-update
+update -NoReadme
