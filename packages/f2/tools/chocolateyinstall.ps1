@@ -18,5 +18,3 @@ $installArgs = @{
 }
 
 Install-ChocolateyZipPackage @installArgs
-$File = Get-ChildItem -File -Path $env:ChocolateyInstall\lib\$packageName\tools\ -Filter *.zip
-Get-ChocolateyUnzip -fileFullPath $File.FullName -destination $env:ChocolateyInstall\lib\$packageName\tools\
