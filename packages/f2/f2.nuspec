@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>f2</id>
-    <version>1.9.1</version>
+    <version>2.2.2</version>
     <title>f2</title>
     <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/master/packages/f2</packageSourceUrl>
     <authors>Ayooluwa Isaiah</authors>
