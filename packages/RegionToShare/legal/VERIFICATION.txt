@@ -1,0 +1,16 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Download the following installers:
+  32-Bit: https://github.com/tom-englert/RegionToShare/releases/download/1.11.0/RegionToShare.zip
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum32: 47f08f0d27a50d656e6ba08320a6001c038ffe85ff1fdacc1ab28108fb3929e7
+
+File 'LICENSE.txt' is obtained from https://github.com/tom-englert/RegionToShare/blob/9b1a062e5902689720057d51b2f97e3854d01aae/LICENSE

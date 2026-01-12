@@ -15,7 +15,12 @@ function global:au_SearchReplace {
             "(?i)(^\`$downloadUrl\s*=\s*)('.*')"  = "`$1'$($Latest.URL32)'"
             "(?i)(^\`$fileChecksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
         }
+
+        "legal\verification.txt" = @{
+            "(?i)(^\s*32-Bit:)(.*)" = "`$1 $($Latest.URL32)"
+            "(?i)(^\s*checksum32:)(.*)" = "`$1 $($Latest.Checksum32)"
+        }
     }
 }
 
-update
+Update-Package
