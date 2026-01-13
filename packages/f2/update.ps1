@@ -18,6 +18,13 @@ function global:au_SearchReplace {
             "(?i)(^\`$url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
             "(?i)(^\`$checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
+
+        "legal\verification.txt" = @{
+            "(?i)(^\s*32-Bit:)(.*)" = "`$1 $($Latest.URL32)"
+            "(?i)(^\s*64-Bit:)(.*)" = "`$1 $($Latest.URL64)"
+            "(?i)(^\s*checksum32:)(.*)" = "`$1 $($Latest.Checksum32)"
+            "(?i)(^\s*checksum64:)(.*)" = "`$1 $($Latest.Checksum64)"
+        }
     }
 }
 
