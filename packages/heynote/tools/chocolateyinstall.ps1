@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$url = 'https://github.com/heyman/heynote/releases/download/v2.7.2/Heynote_2.7.2.exe'
-$checksum = 'b3e1e6e881c9a497a814aac905ea573401262193dfcb4fa6653f1aa41239c925'
+$url = 'https://github.com/heyman/heynote/releases/download/v2.8.0/Heynote_2.8.0.exe'
+$checksum = 'c0aea9295f95d781159da455e488db016af8e1594213cd49e6c098f9e2195f64'
 
 $installArgs = @{
     packageName   = 'heynote'
