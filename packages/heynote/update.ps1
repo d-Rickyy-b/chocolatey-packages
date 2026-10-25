@@ -2,10 +2,13 @@ Import-Module Chocolatey-AU
 
 function global:au_GetLatest {
     $LatestRelease = Get-GitHubRelease heyman heynote
-     
+    $URL32 = $LatestRelease.assets | Where-Object {$_.name -Match 'Heynote_\d+\.\d+\.\d+\.exe$'} | Select-Object -ExpandProperty browser_download_url
+
+    if (-not $URL32) { throw "Installer asset not found in release $($LatestRelease.tag_name)" }
+
     return @{
         Version = $LatestRelease.tag_name.TrimStart("v")
-        URL32   = $LatestRelease.assets | Where-Object {$_.name -Match 'Heynote_\d+\.\d+\.\d+\.exe$'} | Select-Object -ExpandProperty browser_download_url
+        URL32   = $URL32
     }
 }
 
@@ -23,4 +26,4 @@ function global:au_SearchReplace {
     }
 }
 
-Update-Package -NoReadme -NoCheckChocoVersion
+Update-Package -NoReadme
