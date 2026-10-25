@@ -9,14 +9,15 @@
     <owners>d-Rickyy-b</owners>
     <projectUrl>https://heynote.com/</projectUrl>
     <projectSourceUrl>https://github.com/heyman/heynote</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/heyman/heynote/issues</bugTrackerUrl>
     <licenseUrl>https://github.com/heyman/heynote/blob/main/LICENSE</licenseUrl>
-    <iconUrl>https://heynote.com/img/logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/heyman/heynote@main/public/icon.png</iconUrl>
     <releaseNotes>https://github.com/heyman/heynote/blob/main/docs/changelog.md</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/heyman/heynote)](https://github.com/heyman/heynote/releases)
 [![Build Status](https://github.com/heyman/heynote/workflows/Tests/badge.svg)](https://github.com/heyman/heynote/actions?query=workflow%3ATests)
 
-<img src="https://heynote.com/img/logo.png" style="width:79px;">
+<img src="https://cdn.jsdelivr.net/gh/heyman/heynote@main/public/icon.png" style="width:79px;">
 
 ## General Information
 
@@ -85,5 +86,6 @@ Heynote is built upon [CodeMirror](https://codemirror.net/), [Vue](https://vuejs
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

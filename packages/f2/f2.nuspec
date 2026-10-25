@@ -51,5 +51,6 @@ Created by Ayooluwa Isaiah and released under the terms of the [MIT Licence](htt
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
