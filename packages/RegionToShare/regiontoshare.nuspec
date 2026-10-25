@@ -94,5 +94,6 @@ If you like this tool, don't forget to ⭐ it.
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
