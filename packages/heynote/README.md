@@ -39,35 +39,6 @@ Available for Mac, Windows, and Linux.
 
 [Documentation](https://heynote.com/docs/) is available on the Heynote website.
 
-## Development
-
-To develop Heynote you need Node.js and you should (hopefully) just need to check out the code and then run:
-
-```
-> npm install
-> npm run dev
-```
-
-### Run Tests
-
-To run the tests:
-
-```
-> npm run test
-```
-
-To run the tests in the Playwright UI:
-
-```
-> npm run test:ui
-```
-
-
-### Contributions
-
-I'm happy to merge contributions that fit my vision for the app. Bug fixes are always welcome. 
-
-
 ## FAQ
 
 ### Where is the buffer data stored?
@@ -87,6 +58,10 @@ I can totally see the usefulness of such a feature, and it's definitely somethin
 ### What are the default keyboard shortcuts?
 
 See the [documentation](https://heynote.com/docs/#user-content-default-key-bindings).
+
+## Licence
+
+Heynote is licensed under the MIT licence with the [Commons Clause](https://commonsclause.com/) condition: you may use, modify and share it freely, but you may not sell the software. See the [licence](https://github.com/heyman/heynote/blob/main/LICENSE).
 
 ## Thanks!
 
