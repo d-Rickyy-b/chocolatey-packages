@@ -86,5 +86,6 @@ Heynote is built upon [CodeMirror](https://codemirror.net/), [Vue](https://vuejs
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
