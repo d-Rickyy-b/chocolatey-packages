@@ -49,7 +49,10 @@ param(
     [string]$ForcedPackages,
 
     # The directory to update packages in
-    [string]$Root = "$PSScriptRoot\packages"
+    [string]$Root = "$PSScriptRoot\packages",
+
+    # Whether failures during the update should throw or not.
+    [switch]$ThrowOnErrors
 )
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) {
@@ -99,8 +102,8 @@ $Options = [ordered]@{
     Path   = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
     Params = @{                                          #Report parameters:
       Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
-      NoAppVeyor      = $false                            #  Markdown: do not show AppVeyor build shield
-      UserMessage     = "[Ignored](#ignored) | [History](#update-history) | [Force Test](https://gist.github.com/$Env:gist_id_test)"       #  Markdown, Text: Custom user message to show
+      NoAppVeyor      = $true                             #  Markdown: do not show AppVeyor build shield
+      UserMessage     = "[Ignored](#ignored) | [Workflow run]($Env:GITHUB_SERVER_URL/$Env:github_user_repo/actions/runs/$Env:GITHUB_RUN_ID)"       #  Markdown, Text: Custom user message to show
       NoIcons         = $false                            #  Markdown: don't show icon
       IconSize        = 32                                #  Markdown: icon size
       Title           = ''                                #  Markdown, Text: TItle of the report, by default 'Update-AUPackages'
@@ -139,7 +142,7 @@ $Options = [ordered]@{
       Port        = $Env:mail_port
       EnableSsl   = $Env:mail_enablessl -eq 'true'
       Attachment  = "$PSScriptRoot\update_info.xml"
-      UserMessage = "Update status: Update status: https://gist.github.com/choco-bot/$Env:gist_id"
+      UserMessage = "Update status: $Env:GITHUB_SERVER_URL/$Env:github_user_repo/actions/runs/$Env:GITHUB_RUN_ID"
       SendAlways  = $false                        #Send notifications every time
     }
   }

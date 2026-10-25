@@ -2,11 +2,16 @@ Import-Module Chocolatey-AU
 
 function global:au_GetLatest {
     $LatestRelease = Get-GitHubRelease ayoisaiah f2
+    $URL32 = $LatestRelease.assets | Where-Object {$_.name -Match '_windows_(i?)386.zip'} | Select-Object -ExpandProperty browser_download_url
+    $URL64 = $LatestRelease.assets | Where-Object {$_.name -Match '_windows_amd64.zip'} | Select-Object -ExpandProperty browser_download_url
+
+    if (-not $URL32) { throw "32-bit asset not found in release $($LatestRelease.tag_name)" }
+    if (-not $URL64) { throw "64-bit asset not found in release $($LatestRelease.tag_name)" }
 
     return @{
         Version = $LatestRelease.tag_name.TrimStart("v")
-        URL32   = $LatestRelease.assets | Where-Object {$_.name -Match '_windows_(i?)386.zip'} | Select-Object -ExpandProperty browser_download_url
-        URL64   = $LatestRelease.assets | Where-Object {$_.name -Match '_windows_amd64.zip'} | Select-Object -ExpandProperty browser_download_url
+        URL32   = $URL32
+        URL64   = $URL64
     }
 }
 
@@ -28,4 +33,4 @@ function global:au_SearchReplace {
     }
 }
 
-update -NoReadme
+Update-Package -NoReadme

@@ -2,10 +2,13 @@ Import-Module Chocolatey-AU
 
 function global:au_GetLatest {
     $LatestRelease = Get-GitHubRelease tom-englert RegionToShare
-     
+    $URL64 = $LatestRelease.assets | Where-Object {$_.name -Match '^RegionToShare\.exe$'} | Select-Object -ExpandProperty browser_download_url
+
+    if (-not $URL64) { throw "64-bit asset not found in release $($LatestRelease.tag_name)" }
+
     return @{
         Version = $LatestRelease.tag_name.TrimStart("v")
-        URL64   = $LatestRelease.assets | Where-Object {$_.name -Match '^RegionToShare\.exe$'} | Select-Object -ExpandProperty browser_download_url
+        URL64   = $URL64
     }
 }
 

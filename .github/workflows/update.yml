@@ -38,3 +38,13 @@ jobs:
           github_user_repo: ${{ github.repository }}
           github_api_key: ${{ secrets.GITHUB_TOKEN }}
           au_Push: "true"
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: au-reports
+          path: |
+            Update-AUPackages.md
+            Update-History.md
+          if-no-files-found: ignore
