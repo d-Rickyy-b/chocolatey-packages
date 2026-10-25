@@ -9,6 +9,16 @@ on:
       - master
   workflow_dispatch:
     # Allow manual triggering of the workflow
+    inputs:
+      force_package:
+        description: "Package to force a resubmit of (AU fix version, e.g. 1.2.3.20261025). Leave at 'none' for a normal run."
+        type: choice
+        default: none
+        options:
+          - none
+          - f2
+          - heynote
+          - RegionToShare
 
 permissions:
   contents: write  # AU commits and pushes package updates
@@ -39,9 +49,15 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git config --global core.safecrlf false
-          .\update_all.ps1
+          if ($Env:force_package -and $Env:force_package -ne 'none') {
+            # Only touch the chosen package and bump it to a fix version
+            .\update_all.ps1 -Name $Env:force_package -ForcedPackages $Env:force_package
+          } else {
+            .\update_all.ps1
+          }
         shell: powershell
         env:
+          force_package: ${{ inputs.force_package }}
           api_key: ${{ secrets.choco_api_key }}
           github_user_repo: ${{ github.repository }}
           github_api_key: ${{ secrets.GITHUB_TOKEN }}
