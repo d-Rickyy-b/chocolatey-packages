@@ -5,20 +5,20 @@ function global:au_GetLatest {
      
     return @{
         Version = $LatestRelease.tag_name.TrimStart("v")
-        URL32   = $LatestRelease.assets | Where-Object {$_.name -Match 'RegionToShare.zip'} | Select-Object -ExpandProperty browser_download_url
+        URL64   = $LatestRelease.assets | Where-Object {$_.name -Match '^RegionToShare\.exe$'} | Select-Object -ExpandProperty browser_download_url
     }
 }
 
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\`$downloadUrl\s*=\s*)('.*')"  = "`$1'$($Latest.URL32)'"
-            "(?i)(^\`$fileChecksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(?i)(^\`$downloadUrl\s*=\s*)('.*')"  = "`$1'$($Latest.URL64)'"
+            "(?i)(^\`$fileChecksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
 
         "legal\verification.txt" = @{
-            "(?i)(^\s*32-Bit:)(.*)" = "`$1 $($Latest.URL32)"
-            "(?i)(^\s*checksum32:)(.*)" = "`$1 $($Latest.Checksum32)"
+            "(?i)(^\s*64-Bit:)(.*)" = "`$1 $($Latest.URL64)"
+            "(?i)(^\s*checksum64:)(.*)" = "`$1 $($Latest.Checksum64)"
         }
     }
 }
