@@ -3,7 +3,7 @@
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/heyman/heynote)](https://github.com/heyman/heynote/releases)
 [![Build Status](https://github.com/heyman/heynote/workflows/Tests/badge.svg)](https://github.com/heyman/heynote/actions?query=workflow%3ATests)
 
-<img src="https://heynote.com/img/logo.png" style="width:79px;">
+<img src="https://cdn.jsdelivr.net/gh/heyman/heynote@main/public/icon.png" style="width:79px;">
 
 ## General Information
 
