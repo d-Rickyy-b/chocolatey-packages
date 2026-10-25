@@ -12,3 +12,6 @@ $packageArgs = @{
 }
 
 Get-ChocolateyWebFile @packageArgs
+
+# Mark the exe as a GUI app so its shim doesn't block the console
+New-Item -Path "$($packageArgs.fileFullPath).gui" -ItemType File -Force | Out-Null

@@ -9,6 +9,7 @@
     <owners>d-Rickyy-b</owners>
     <projectUrl>https://heynote.com/</projectUrl>
     <projectSourceUrl>https://github.com/heyman/heynote</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/heyman/heynote/issues</bugTrackerUrl>
     <licenseUrl>https://github.com/heyman/heynote/blob/main/LICENSE</licenseUrl>
     <iconUrl>https://heynote.com/img/logo.png</iconUrl>
     <releaseNotes>https://github.com/heyman/heynote/blob/main/docs/changelog.md</releaseNotes>
