@@ -38,9 +38,8 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Choco install updater
-        uses: crazy-max/ghaction-chocolatey@v3
-        with:
-          args: install chocolatey-au wormies-au-helpers --confirm
+        run: choco install chocolatey-au wormies-au-helpers --confirm --no-progress
+        shell: powershell
 
       - name: Update
         run: |
