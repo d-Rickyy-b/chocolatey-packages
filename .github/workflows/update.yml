@@ -10,6 +10,14 @@ on:
   workflow_dispatch:
     # Allow manual triggering of the workflow
 
+permissions:
+  contents: write  # AU commits and pushes package updates
+
+concurrency:
+  # Don't let a push and the scheduled run update and push at the same time
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   update:
     name: Update
@@ -28,8 +36,8 @@ jobs:
         run: |
           Set-ExecutionPolicy Bypass -Scope Process -Force
           refreshenv
-          git config --global user.email "chocolatey@realdimensions.net"
-          git config --global user.name "Chocolatey"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git config --global core.safecrlf false
           .\update_all.ps1
         shell: powershell
