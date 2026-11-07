@@ -19,6 +19,7 @@ on:
           - f2
           - heynote
           - RegionToShare
+          - resticprofile
 
 permissions:
   contents: write  # AU commits and pushes package updates
