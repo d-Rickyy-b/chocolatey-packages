@@ -19,15 +19,12 @@ on:
           - f2
           - heynote
           - RegionToShare
-<<<<<<< HEAD
           - resticprofile
-=======
       force_version:
         description: "Optional exact version for the forced package (e.g. 1.12.0). When set, AU pushes this exact version instead of the generated fix version, e.g. to re-upload a version stuck in moderation. Ignored when the package is 'none'."
         type: string
         required: false
         default: ""
->>>>>>> origin/main
 
 permissions:
   contents: write  # AU commits and pushes package updates
