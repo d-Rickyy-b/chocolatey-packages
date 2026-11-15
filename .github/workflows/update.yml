@@ -19,7 +19,15 @@ on:
           - f2
           - heynote
           - RegionToShare
+<<<<<<< HEAD
           - resticprofile
+=======
+      force_version:
+        description: "Optional exact version for the forced package (e.g. 1.12.0). When set, AU pushes this exact version instead of the generated fix version, e.g. to re-upload a version stuck in moderation. Ignored when the package is 'none'."
+        type: string
+        required: false
+        default: ""
+>>>>>>> origin/main
 
 permissions:
   contents: write  # AU commits and pushes package updates
@@ -50,14 +58,18 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global core.safecrlf false
           if ($Env:force_package -and $Env:force_package -ne 'none') {
-            # Only touch the chosen package and bump it to a fix version
-            .\update_all.ps1 -Name $Env:force_package -ForcedPackages $Env:force_package
+            # Only touch the chosen package; force a fix version, or the exact version if one was given
+            $version = "$Env:force_version".Trim()
+            if ($version -match '\s') { throw "force_version must not contain whitespace: '$version'" }
+            $forced = if ($version) { "${Env:force_package}:$version" } else { $Env:force_package }
+            .\update_all.ps1 -Name $Env:force_package -ForcedPackages $forced
           } else {
             .\update_all.ps1
           }
         shell: powershell
         env:
           force_package: ${{ inputs.force_package }}
+          force_version: ${{ inputs.force_version }}
           api_key: ${{ secrets.choco_api_key }}
           github_user_repo: ${{ github.repository }}
           github_api_key: ${{ secrets.GITHUB_TOKEN }}
