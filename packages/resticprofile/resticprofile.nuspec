@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>resticprofile</id>
-    <version>0.33.1</version>
+    <version>0.34.0</version>
     <title>resticprofile</title>
     <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/main/packages/resticprofile</packageSourceUrl>
     <authors>creativeprojects</authors>

@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$url32 = 'https://github.com/creativeprojects/resticprofile/releases/download/v0.33.1/resticprofile_no_self_update_0.33.1_windows_386.tar.gz'
-$checksum32 = '9167d162ed11058c7020d48bdd8aadb955d32cb473ac72324a6f2494bf4df07b'
-$url64 = 'https://github.com/creativeprojects/resticprofile/releases/download/v0.33.1/resticprofile_no_self_update_0.33.1_windows_amd64.tar.gz'
-$checksum64 = 'a11c4a14eaf06d807b90d9be43ff8872ac28b26b27979188f046dd037ea25cd7'
+$url32 = 'https://github.com/creativeprojects/resticprofile/releases/download/v0.34.0/resticprofile_no_self_update_0.34.0_windows_386.tar.gz'
+$checksum32 = '770718bffe110b2b7f495bf52f4f5cf6593d6061bb49bc471d593d81fa76620a'
+$url64 = 'https://github.com/creativeprojects/resticprofile/releases/download/v0.34.0/resticprofile_no_self_update_0.34.0_windows_amd64.tar.gz'
+$checksum64 = '9960e82809312f8a8f4a0f2eacf4bf7c393aa60504d218711543aa676afead98'
 
 $installArgs = @{
     packageName    = 'resticprofile'
