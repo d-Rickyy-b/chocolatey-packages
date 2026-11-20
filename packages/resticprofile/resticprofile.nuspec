@@ -6,6 +6,7 @@
     <title>resticprofile</title>
     <packageSourceUrl>https://github.com/d-Rickyy-b/chocolatey-packages/tree/main/packages/resticprofile</packageSourceUrl>
     <authors>creativeprojects</authors>
+    <copyright>Copyright (c) 2019-2026 creativeprojects</copyright>
     <owners>d-Rickyy-b</owners>
     <projectUrl>https://creativeprojects.github.io/resticprofile/</projectUrl>
     <projectSourceUrl>https://github.com/creativeprojects/resticprofile</projectSourceUrl>
@@ -62,6 +63,5 @@ Start with the [getting started](https://creativeprojects.github.io/resticprofil
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="legal\**" target="legal" />
   </files>
 </package>
